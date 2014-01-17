@@ -1,0 +1,125 @@
+#include<iostream>
+using namespace std;
+
+char c, x;
+
+int check(char);
+void go(char);
+
+void start()
+{
+	cout <<"give your input hea: "; cin>> c;
+	check (c);
+}
+
+int check(char)
+{
+	try
+	{
+		if((c>=65 && c<=90)||(c>=97 && c<=122))
+		{
+			go(c);
+		}
+		else
+		{
+			throw x;
+		}
+	}
+	catch(...)
+	{
+		cout<<"\n\ntry again fella!\ngive it again: ";
+		cin>> c;
+		check(c);
+	}
+	return 1;
+}
+
+void go(char c)
+{
+	cout <<"\n\nin morse code it is: ";
+	
+	if(c=='a' || c=='A')
+	{cout <<".-\n\n\n";}
+	
+	else if(c=='b' || c=='B')
+	{cout <<"-...\n\n\n";}
+	
+	else if(c=='c' || c=='C')
+	{cout <<"-.-.\n\n\n";}
+	
+	else if(c=='d' || c=='D')
+	{cout <<"-..\n";}
+	
+	else if(c=='e' || c=='E')
+	{cout <<".\n";}
+	
+	else if(c=='f' || c=='F')
+	{cout <<"..-.\n\n";}
+	
+	else if(c=='g' || c=='G')
+	{cout <<"--.\n";}
+	
+	else if(c=='h' || c=='H')
+	{cout <<"....\n";}
+	
+	else if(c=='i' || c=='I')
+	{cout <<"..\n";}
+
+	else if(c=='j' || c=='J')
+	{cout <<".---\n\n";}
+
+	else if(c=='k' || c=='K')
+	{cout <<"-.-\n";}
+
+	else if(c=='l' || c=='L')
+	{cout <<".-..\n";}
+
+	else if(c=='m' || c=='M')
+	{cout <<"--\n";}
+
+	else if(c=='n' || c=='N')
+	{cout <<"-.\n\n";}
+
+	else if(c=='o' || c=='O')
+	{cout <<"---\n\n";}
+
+	else if(c=='p' || c=='P')
+	{cout <<".--.\n";}
+
+	else if(c=='q' || c=='Q')
+	{cout <<"--.-\n";}
+
+	else if(c=='r' || c=='R')
+	{cout <<".-.\n";}
+
+	else if(c=='s' || c=='S')
+	{cout <<"...\n";}
+
+	else if(c=='t' || c=='T')
+	{cout <<"-\n";}
+
+	else if(c=='u' || c=='U')
+	{cout <<"..-\n\n";}
+
+	else if(c=='v' || c=='V')
+	{cout <<"...-\n";}
+
+	else if(c=='w' || c=='W')
+	{cout <<".--\n";}
+
+	else if(c=='x' || c=='X')
+	{cout <<"-..-\n";}
+
+	else if(c=='y' || c=='Y')
+	{cout <<"-.--\n";}
+
+	else if(c=='z' || c=='Z')
+	{cout <<"--..\n";}
+}
+
+int main(void)
+{
+	start();
+	return 0;
+}
+
